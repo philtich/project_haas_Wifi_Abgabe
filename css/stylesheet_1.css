@@ -173,11 +173,11 @@ h1{
     text-align: center;
 }
 
-.link-kontakt{
+.link-contact{
     text-align: center;
 }
 
-.link-kontakt a{
+.link-contact a{
     color: #efefef;
     text-decoration: none;
     
@@ -188,6 +188,7 @@ h1{
     background-color: #155e62;
     height: 100%;
     text-align: center;
+
 }
 #footer span{
     text-align: center;
@@ -197,6 +198,22 @@ h1{
     text-align: center;
     color: #efefef;
     text-decoration: none;
+}
+
+#footer img{
+    display:none;
+}
+
+.index-section{
+    display: none;
+}
+
+figure {
+    display: none;
+}
+
+aside{
+    display: none;
 }
 /* Navigation Breakpoint */
 @media screen and (min-width: 900px) {
@@ -221,7 +238,7 @@ h1{
         padding: 0;
         overflow-y: visible;
         display: flex;
-        gap: 1.5em
+        gap: 1.5em;
     }
 
     #main-menu > li {
@@ -246,6 +263,11 @@ h1{
         opacity: 0;
         pointer-events: none;
         transition: opacity 200ms ease-in-out;
+        
+    }
+
+    #main-menu .sub-menu a{
+        border: 1px #efefef solid;
     }
 
     #main-menu > li:hover .sub-menu {
@@ -253,5 +275,119 @@ h1{
         pointer-events: all;  
     }
 
-}
+    #main img{
+        display: none;
 
+    }
+    #main a{
+        display: none;
+
+    }
+
+    .index-section{
+        display: block;
+        color: #efefef;
+        padding: 5%;
+    }
+
+    .index-section h2{
+        text-align: center;
+    }
+
+
+    #footer{
+        height: 120px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5em;
+    }
+
+
+
+    #footer img{
+        display: block;
+        border-radius: 50%;
+        width: 6%;
+
+    }
+
+    figure{
+        display: block;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .figcaption-header{
+        position: absolute;
+        top: 130px;
+        left: 120px;
+        color: #efefef;
+        background-color: rgba(21, 94, 98, 0.1);
+        font-size: 46px;
+        padding: 6px;
+    }
+    .figcaption-header2{
+        position: absolute;
+        top: 530px;
+        left: 40px;
+        color: #efefef;
+        background-color: rgba(21, 94, 98, 0.1);
+        font-size: 46px;
+        padding: 6px;
+    }
+
+    #header-img{
+        width: 100%;
+    }
+
+    aside {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+        gap: 1.5em;
+        position: relative;
+        background-color: #155e62;
+        border-top: 1px #efefef solid;
+        border-bottom: 1px #efefef solid;
+    }
+
+    
+    .reference1-aside{
+        display:block;
+        border-radius: 50%;
+        width: 15%;
+        height: 15%;
+
+    }
+
+    .div-aside{
+       color: #efefef;
+       font-style: italic;
+      font-size: 16px;
+        
+     }
+
+     #nav-main{
+        border-bottom: 1px #efefef solid;
+     }
+
+     aside .div-aside span{
+        font-style: normal;
+        font-weight: bold;
+        padding: 2px;
+     }
+
+}
