@@ -12,8 +12,8 @@ html {
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
-    background-color: linear-gradient(to bottom, rgb(21, 94, 98) 0, rgb(21, 94, 98) 95%);
-    padding-top: 70px; /* Höhe der Navigation (fixed) */
+    background-color:  rgb(21, 94, 98);
+    padding-top: 100px; /* Höhe der Navigation (fixed) */
 }
 
 /* Navbar */
@@ -35,7 +35,7 @@ body {
     margin: 5px;
     padding: 5px;
     height: 90px;
-}
+} 
 
 .logo img {
     text-decoration: none;
@@ -154,6 +154,50 @@ body {
     padding: .6em 0;
 }
 
+
+#main{
+    background-color:  rgb(21, 94, 98);
+    height:100%;
+}
+
+#main-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 50%;
+}
+
+h1{
+    color: #efefef;
+    text-align: center;
+}
+
+.link-kontakt{
+    text-align: center;
+}
+
+.link-kontakt a{
+    color: #efefef;
+    text-decoration: none;
+    
+
+}
+
+#footer{
+    background-color: #155e62;
+    height: 100%;
+    text-align: center;
+}
+#footer span{
+    text-align: center;
+    color: #efefef;
+}
+#footer a{
+    text-align: center;
+    color: #efefef;
+    text-decoration: none;
+}
 /* Navigation Breakpoint */
 @media screen and (min-width: 900px) {
     
