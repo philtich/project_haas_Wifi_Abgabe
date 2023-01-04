@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/stylesheet_2.css">
+    <link rel="stylesheet" href="css/stylesheet_4.css">
     <title>Christian Haas </title>
 </head>
 <body>
@@ -62,21 +62,54 @@
             </li>
         </ul>
     </nav>
-    <main>
-        <h1> Mein Coaching-Angebot</h1>
-        <div class="div-main1"> <span class="package">GOLD-Paket</span></div><br>
-        <span class="span-offer1"> € 349,- pro Monat </span><br>
-        <span class="span-offer">Das Paket für Profis und hochambitionierte Athlet*innen</span>
-        <div class="link-offer"><a href="gold-paket.html">Zum Gold-Paket</a></div>    
-        <div class="div-main2"> <span class="package">Silber-Paket</span></div><br>
-        <span class="span-offer1"> € 179,- pro Monat </span><br>
-        <span class="span-offer">Das Paket für Amateure und fokussierte Freizeitsportler*innen</span>
-        <div class="link-offer"><a href="silber-paket.html">Zum Silber-Paket</a></div>  
-        <div class="div-main3"> <span class="package">Bronze-Paket</span></div><br>
-        <span class="span-offer1"> € 119,- pro Monat </span><br>
-        <span class="span-offer">Das Paket für Einsteiger und Hobbysportler*innen</span>
-        <div class="link-offer"><a href="bronze-paket.html">Zum Bronze-Paket</a></div>  
+
+    <h1>Über mich</h1>
+    <div class="w3-content w3-display-container" style="text-align:center">
+        <img class="mySlides" src="img/bild6.jpg">
+        <img class="mySlides" src="img/bild7.jpg">
+        <img class="mySlides" src="img/bild8.jpg" >
+      
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)" style="margin:2.5%">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)" style="margin: 2.5%">&#10095;</button>
+      </div>
+      
+      <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+          x[i].style.width = "300px"; 
+          x[i].style.height = "auto";
+          x[i].style.margin = "0 auto"; 
+        }
+        x[slideIndex-1].style.display = "block" ;  
+       
+      }
+      </script>
+
+    <main id="main">
+      <h2>Zugang zum Sport</h2>
+      <p class="message-uebermich">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
+        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem 
+        ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
     </main>
+    <aside>
+        <div class="link-offer"><a href="#">Meine Biographie</a></div>  
+        <div class="link-offer"><a href="#">Meine Erfolge</a></div>  
+    </aside>
+  
     <footer id="footer">
         <p>© Philipp Tichy</p>
         <img src="img/bild2.jpg" alt="Christian Haas"> 
