@@ -277,7 +277,7 @@ aside{
 }
 
 #footer p{
-    display: none;
+    color: #efefef;
 }
 
 .contact-footer{
@@ -301,6 +301,11 @@ aside{
 .button-top a {
     display: block;
 }
+
+.links-footer{
+    text-transform: uppercase;
+}
+
 /* Navigation Breakpoint */
 @media screen and (min-width: 900px) {
     
@@ -335,8 +340,11 @@ aside{
     #main-menu > li > a {
         font-size: 1em;
         line-height: 100px;
+    }
 
-    
+    #main-menu > li > ul > li a:hover {
+        color: #155e62;
+        background-color: #efefef;
     }
 
     #main-menu .sub-menu {
@@ -354,7 +362,14 @@ aside{
 
     #main-menu .sub-menu a{
         border: 1px #efefef solid;
+        border-top: 0;
+      
     }
+
+
+    #nav-main{
+        border-bottom: 1px #efefef solid;
+     }
 
     #main-menu > li:hover .sub-menu {
         opacity: 1;  
@@ -371,24 +386,36 @@ aside{
     }
 
     #footer{
-        height: 120px;
+        height: 80px;
         bottom: 0;
         left: 0;
         right: 0;
         display: flex;
         text-align: center;
         justify-content: center;
+        gap: 2em;
         align-items: center;
-        gap: 1.5em;
         color: #efefef;
     }
 
     #footer img{
-        display: block;
+        display: inline-block;
         border-radius: 50%;
-        width: 6%;
+        width: 25%;
 
     }
+
+    #footer p{
+        display: block;
+     }
+
+
+    .links-footer{
+        display: flex;
+        gap: 1.5em;
+        text-transform: uppercase;
+    }
+    
 
     .figure-relative{
         display: block;
@@ -404,7 +431,7 @@ aside{
         top: 100px;
         left: 120px;
         color: #efefef;
-        background-color: rgba(21, 94, 98, 0.1);
+        background-color: rgba(21, 94, 98, 0.8);
         font-size: 46px;
         padding: 6px;
     }
@@ -413,7 +440,7 @@ aside{
         bottom: 100px;
         left: 40px;
         color: #efefef;
-        background-color: rgba(21, 94, 98, 0.1);
+        background-color: rgba(21, 94, 98, 0.8);
         font-size: 46px;
         padding: 6px;
     }
@@ -461,25 +488,10 @@ aside{
 
      }
 
-
-
-
-     #nav-main{
-        border-bottom: 1px #efefef solid;
-     }
-
      aside .div-aside span{
         font-style: normal;
         font-weight: bold;
         padding: 2px;
-     }
-
-     #footer{
-        height: 100%;
-     }
-
-     #footer p{
-        display: block;
      }
 
      .button-top{
@@ -496,4 +508,4 @@ aside{
         padding: 0 2,5%;
      }
 
-}
+}   

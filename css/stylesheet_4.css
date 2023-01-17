@@ -249,5 +249,243 @@ figure {
     display: block;
 }
 
+/* Navigation Breakpoint */
+@media screen and (min-width: 900px) {
+    
+    body {
+        padding-top: 100px; 
+    }
+
+    #nav-main {
+        height: 100px;
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+    #main-menu {
+        opacity: 1;
+        pointer-events: all;
+        position: static;
+        background-color: transparent;
+        padding: 0;
+        overflow-y: visible;
+        display: flex;
+        gap: 1.5em;
+    }
+
+    #main-menu > li {
+        border: none;
+        position: relative;
+    }
+
+    #main-menu > li > a {
+        font-size: 1em;
+        line-height: 100px;
+    }
+
+    #main-menu > li > ul > li a:hover {
+        color: #155e62;
+        background-color: #efefef;
+    }
+
+    #main-menu .sub-menu {
+        position: absolute;
+        background-color: rgb(21, 94, 98);
+        width: 200px;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 200ms ease-in-out;
+        
+    }
+
+    #main-menu .sub-menu a{
+        border: 1px #efefef solid;
+        border-top: 0;
+      
+    }
+
+
+    #nav-main{
+        border-bottom: 1px #efefef solid;
+     }
+
+    #main-menu > li:hover .sub-menu {
+        opacity: 1;  
+        pointer-events: all;  
+    }
+
+    #main img{
+        display: none;
+
+    }
+    #main a{
+        display: none;
+
+    }
+
+    #footer{
+        height: 80px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+        color: #efefef;
+    }
+
+    #footer img{
+        display: inline-block;
+        border-radius: 50%;
+        width: 25%;
+
+    }
+
+    #footer p{
+        display: block;
+     }
+
+
+    .links-footer{
+        display: flex;
+        gap: 1.5em;
+        text-transform: uppercase;
+    }
+
+    header{
+        display: block;
+    }
+    
+
+    .figure-relative{
+        display: block;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .figcaption-header{
+        position: absolute;
+        bottom: 100px;
+        left: 120px;
+        color: #efefef;
+        background-color: rgba(21, 94, 98, 0.8);
+        font-size: 46px;
+        padding: 6px;
+    }
+
+    #header-img{
+        width: 100%;
+    }
+
+    .button-top{
+        display:none;
+    }
+
+    h2{
+        display: block;
+        color:#efefef;
+    }
+
+    .packages{
+
+        border-bottom: 1px #efefef solid;
+
+    }
+
+    .link-offer{
+        border: 2px solid currentColor;
+        color: #efefef;
+        overflow: hidden;
+        padding: 1rem 2rem;
+        position: relative;
+        transition: .2s transform ease-in-out;
+        will-change: transform;
+        z-index: 0;
+        
+    }
+
+    .link-offer::after{
+    background-color: #155e62;
+    color: #efefef;
+    content: 'Hier gehts zu mehr Infos';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: .2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+    
+  .link-offer:hover::after{
+    transform: translate(0, 0);
+}
+    
+  .link-offer:hover{
+    border: 2px solid transparent;
+    transform: scale(1.05);
+    will-change: transform;
+  }
+
+  .link-offer:hover ~ .link-offer> a {
+    opacity:0;
+  }
+
+
+  aside {
+    display: block;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: relative;
+    background-color: #155e62;
+    border-bottom: 1px #efefef solid;
+    border-top: 1px #efefef solid;
+    margin: 0;
+}
+
+h3{
+    margin-top: 2.5%;
+    margin-bottom: 0;
+}
+
+#main-image{
+    display:none;
+}
+.link-contact{
+    display: none;
+}
+
+.packages-list{
+    text-align: center;
+    line-height: 2em;
+    list-style-type: none;
+    border: none;
+}
+
+.packages-li{
+    list-style-type: none;
+}
+
+main{
+    margin: 0;
+}
+
+}
      
 
