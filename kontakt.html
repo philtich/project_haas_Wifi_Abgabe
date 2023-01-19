@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/stylesheet_2.css">
+    <link rel="stylesheet" href="css/stylesheet_5.css">
     <title>Christian Haas </title>
 </head>
 <body>
@@ -62,57 +62,64 @@
             </li>
         </ul>
     </nav>
-    <header>
-        <h1> Mein Coaching-Angebot</h1>
-        <figure class="figure-relative">
-        <img id="header-img" src="img/bild10.jpg" alt="Radfahren in Obertrum">
-        <figcaption class="figcaption-header">Gemeinsam <br>große Ziele erreichen!</figcaption>
-    </header>
-    <main>
-        <div class="packages">
-            <h2>Das Gold-Pro-Paket</h2>
-            <div class="div-main1"> <span class="package">GOLD-Paket</span></div><br>
-            <div class="span-package">
-            <span class="span-offer1"> € 349,- pro Monat </span><br>
-            <span class="span-offer">Das Paket für Profis und hochambitionierte Athlet*innen</span>
-            </div>
-            <div class="link-offer"><a href="gold-paket.html">Zum Gold-Pro-Paket</a></div>
-        </div>
-        <div class="packages">
-            <h2>Das Silber-Paket</h2>    
-            <div class="div-main2"> <span class="package">Silber-Paket</span></div><br>
-            <div class="span-package">
-            <span class="span-offer1"> € 179,- pro Monat </span><br>
-            <span class="span-offer">Das Paket für Amateure und fokussierte Freizeitsportler*innen</span>
-            </div> 
-            <div class="link-offer"><a href="silber-paket.html">Zum Silber-Paket</a></div> 
-        </div>
-            <h2>Das Bronze-Paket</h2>
-            <div class="div-main3"> <span class="package">Bronze-Paket</span></div><br>
-            <div class="span-package">
-            <span class="span-offer1"> € 119,- pro Monat </span><br>
-            <span class="span-offer">Das Paket für Einsteiger und Hobbysportler*innen</span>
-            </div>
-            <div class="link-offer"><a href="bronze-paket.html">Zum Bronze-Paket</a></div>  
-        
+    <main id="main">
+        <img id="main-image" src="img/bild2.jpg" alt="Christian Haas">
     </main>
+    <header>
+        
+        <img id="header-img" src="img/bild16.jpg" alt="Trainingsanalsye">
+    </header>
 
-    <aside> 
-        <img class="reference1-aside" src="img/bild5.jpg" alt="Referenz1">
-        <div class="div-aside">  
-           <p class="p-aside"> <span>Katharina S.:</span>"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
-            ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-             et ea rebum.
-             Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-           </p>
-        </div>    
-    </aside>
+    <h1 id="h1"> Kontakt</h1>   
+
+    <section>
+        <form action="kontakt.html" method="get">
+            <fieldset>
+                <legend>Ihre Nachricht an mich</legend>
     
+                <label for="field-text"> Name*</label>
+                <input type="text" id="field-text" name="name" placeholder="Ihr Name" >   
+                
+    
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" placeholder="Email-Adresse">
+    
+                <label for="number">Telefonnummer</label>
+                <input type="text" id="number" name="number" placeholder="Telefonnummer">
+
+                <label for="select">Ich interessiere mich für mich für ein Coaching für:</label>
+            <select id="select" name="select">
+                <option value="1">Laufen</option>
+                <option value="2" selected>Triathlon</option>
+                <option value="3">Schwimmen</option>
+                <option value="3">Sonstiges</option>
+            </select>
+            </fieldset>
+    
+            <label class="textlabel" for="textarea">Nachricht:</label>
+            <textarea id="textarea" name="info" rows="8" placeholder="Hier ist Platz für Ihre Nachricht"></textarea>
+
+            <div class="dsgvoclass">
+            <label for="dsgvo" class="toggler-wrapper style-1"> Datenschutz*
+                <input type="checkbox" id="dsgvo" name="dsgvo"> 
+                <div class="toggler-slider">
+                  <div class="toggler-knob"></div>
+                </div>
+            </label>
+            </div>
+            <input type="submit" value="Absenden">
+        </form>
+
+    </section>
+    <div class="bottom">
+
+    </div>
+ 
     <footer id="footer">
         <div class="links-footer">
             <a href="#">Datenschutz</a>
             <a href="#">Impressum</a>
-            <a href="#">Kontakt</a>
+            <a href="kontakt.html">Kontakt</a>
         </div>
         <br>
         <div class="contact-footer">
