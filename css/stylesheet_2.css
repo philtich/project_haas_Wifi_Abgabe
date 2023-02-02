@@ -213,7 +213,7 @@ main{
     height:100%;
     text-align: center;
    
-    border-bottom: 1px #efefef solid;
+
 }
 
 .div-main1 {
@@ -304,7 +304,55 @@ h2{
 }
 
 aside{
-    display:none;
+    text-align: center;
+    color: #efefef;
+    border-top: 1px #efefef solid;
+   
+    border-bottom: 1px #efefef solid;
+   
+    padding: 5%;
+   height: 280px;
+  
+    
+
+}
+
+.div-aside{
+    color: #efefef;
+    font-style: italic;
+     
+  }
+
+  .div-aside span{
+    font-weight: bold;
+    font-style: normal‚;
+  }
+
+.reference1-aside{
+    border-radius: 50%;
+    width: 120px;
+    border: 1px #efefef solid;
+    float: right;
+    margin: 2.5%;
+
+    
+}
+
+.reference2-aside{
+    border-radius: 50%;
+    width: 120px;
+    border: 1px #efefef solid;
+    float: left;
+    margin: 2.5%;}
+
+.reference3-aside{
+    border-radius: 50%;
+    width: 120px;
+    border: 1px #efefef solid;
+    float: right;
+    margin: 2.5%;
+  
+   
 }
 
 /* Navigation Breakpoint */
@@ -393,10 +441,17 @@ aside{
         right: 0;
         display: flex;
         text-align: center;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-between;
         gap: 2em;
+        align-items: center;
         color: #efefef;
+        position: relative;
+    }
+
+    .contact-footer{
+        position: absolute;
+        top: auto;
+        left: 38%;
     }
 
     #footer img{
@@ -505,13 +560,12 @@ aside{
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-left: 5%;
-    padding-right: 5%;
+   
     padding-top: 2.5%;
     padding-bottom: 2.5%;
     gap: 1.5em;
     position: relative;
-    background-color: #155e62;
+  
     border-bottom: 1px #efefef solid;
 }
 
@@ -519,8 +573,6 @@ aside{
 .reference1-aside{
     display:block;
     border-radius: 50%;
-    width: 15%;
-    height: 15%;
 
 }
 

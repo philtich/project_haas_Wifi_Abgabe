@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/stylesheet_4.css">
+    <link rel="stylesheet" href="css/splide.min.css">
     <title>Christian Haas </title>
 </head>
 <body>
@@ -69,43 +70,16 @@
     </header>
 
     <h1>Über mich</h1>
-    <div class="slider">
-    <div class="w3-content w3-display-container" style="text-align:center; position: relative; width: 300px; display:inline; ">
-        <img class="mySlides" style="position:relative" src="img/bild6.jpg">
-        <img class="mySlides" style="position: relative" src="img/bild7.jpg">
-        <img class="mySlides" style="position: relative" src="img/bild8.jpg" >
-      
-        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)" style="margin:2.5%; background: transparent;
-        border-color: #efefef; color: #efefef; position:absolute; top: 80%; left:38%;">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)" style="margin: 2.5%; color: #efefef; background: transparent; position: absolute;
-        top: 80%; right: 38%;
-        border-color: #efefef;">&#10095;</button>
+    <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+              <ul class="splide__list">
+                  <li class="splide__slide"><img class="slides" src="img/bild6.jpg"></li>
+                  <li class="splide__slide"><img class="slides" src="img/bild7.jpg"></li>
+                  <li class="splide__slide"><img class="slides" src="img/bild8.jpg"></li>
+              </ul>
+        </div>
       </div>
-      </div>
-      
-      <script>
-      var slideIndex = 1;
-      showDivs(slideIndex);
-      
-      function plusDivs(n) {
-        showDivs(slideIndex += n);
-      }
-      
-      function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length}
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-          x[i].style.width = "300px"; 
-          x[i].style.height = "auto";
-          x[i].style.margin = "0 auto"; 
-        }
-        x[slideIndex-1].style.display = "block" ;  
-       
-      }
-      </script>
+    
 
     <main id="main">
       <h2>Zugang zum Sport</h2>
@@ -140,5 +114,17 @@
        
  </footer>
     
+ <script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+      let splide = new Splide( '.splide', {
+        type: 'loop',
+        arrows: 'false'
+
+
+      })
+      splide.mount();
+    } );
+  </script>
+    <script src="js/splide.min.js"></script>
 </body>
 </html>

@@ -254,6 +254,10 @@ aside{
     border-top: 1px #efefef solid;
     border-bottom: 1px #efefef solid;
     margin: 5%;
+    padding: 2.5%;
+   height: 280px;
+  
+    
 
 }
 
@@ -274,6 +278,25 @@ aside{
     border: 1px #efefef solid;
     float: right;
     margin: 2.5%;
+
+    
+}
+
+.reference2-aside{
+    border-radius: 50%;
+    width: 120px;
+    border: 1px #efefef solid;
+    float: left;
+    margin: 2.5%;}
+
+.reference3-aside{
+    border-radius: 50%;
+    width: 120px;
+    border: 1px #efefef solid;
+    float: right;
+    margin: 2.5%;
+  
+   
 }
 
 #footer p{
@@ -392,10 +415,17 @@ aside{
         right: 0;
         display: flex;
         text-align: center;
-        justify-content: center;
+        justify-content: space-between;
         gap: 2em;
         align-items: center;
         color: #efefef;
+        position: relative;
+    }
+
+    .contact-footer{
+        position: absolute;
+        top: auto;
+        left: 38%;
     }
 
     #footer img{
@@ -414,6 +444,7 @@ aside{
         display: flex;
         gap: 1.5em;
         text-transform: uppercase;
+        
     }
     
 
@@ -469,8 +500,7 @@ aside{
     .reference1-aside{
         display:block;
         border-radius: 50%;
-        width: 15%;
-        height: 15%;
+       
 
     }
 

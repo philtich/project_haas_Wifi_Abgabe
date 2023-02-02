@@ -321,6 +321,8 @@ h2{
 
 .packages-li{
     color: #efefef;
+    margin-right: 5%;
+    line-height: 2em;
 }
 
 #main-image{
@@ -431,10 +433,17 @@ header{
         right: 0;
         display: flex;
         text-align: center;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-between;
         gap: 2em;
+        align-items: center;
         color: #efefef;
+        position: relative;
+    }
+
+    .contact-footer{
+        position: absolute;
+        top: auto;
+        left: 38%;
     }
 
     #footer img{
@@ -488,7 +497,7 @@ header{
     }
 
     h2{
-        display: block;
+        text-align: center;
         color:#efefef;
     }
 
@@ -575,6 +584,7 @@ h3{
 }
 
 .packages-li{
+    text-align: center;
     list-style-type: none;
 }
 
