@@ -169,4 +169,45 @@ add_action('wp_enqueue_scripts', function () use ($version) {
 add_filter('show_admin_bar', '__return_false');
 
 
-?>
+
+/* --- Funktonen für das Plugin ACF-Pro --- */
+
+/* Bedingung: Prüfe ob ACF Pro installiert und aktiviert ist
+* die PHP Funktion "function_exists()" prüft ob es diese Funktion mit dem Funktionsnamen gibt - "acf_add_options_page()" wird über das Plugin ACF-Pro deklariert
+* wenn (if) das Plugin ACF-Pro installiert ist, existiert diese Funktion und wir können ACF-Option-Pages und/oder ACF-Gutenberg-Blöcke erstellen
+* sonst (else) geben wir im WordPress Adminbereich eine Fehlermeldung aus, dass diese Plugin benötigt wird
+* https://www.php.net/manual/de/function.function-exists.php
+*/
+
+if (function_exists('acf_add_options_page')) {
+
+    /* ACF Feldgruppen und Feldeinstellungen als .json-Dateien im Theme speichern (Verzeichnis "acf-fields") und von dort laden
+     * ACHTUNG: das Verzeichnis "acf-fields" muss existieren, damit die Dateien dort gespeichert werden können!
+     * https://www.advancedcustomfields.com/resources/local-json/
+     */
+     add_filter('acf/settings/save_json', function ( $path ) {
+         $path = get_template_directory() . '/acf-fields';
+         return $path;
+     });
+     add_filter('acf/settings/load_json', function ( $paths ) {
+         unset($paths[0]);
+         $paths[] = get_stylesheet_directory() . '/acf-fields';
+         return $paths;
+     });
+    }
+
+/* ACF Option Page erstellen
+    * https://www.advancedcustomfields.com/resources/acf_add_options_page/
+    */
+    acf_add_options_page(array(
+        'page_title' => 'Social Links',
+        'menu_title' => 'Social Links',
+        'menu_slug' => 'webdev-social-links',
+        'capability' => 'edit_posts',
+        'position' => 50,
+        'icon_url' => 'dashicons-admin-links', // https://developer.wordpress.org/resource/dashicons/
+        'update_button' => __( 'Änderungen speichern', 'wifi' ),
+        'updated_message' => __( 'Änderungen wurden gespeichert', 'wifi' )
+    ));
+
+    
