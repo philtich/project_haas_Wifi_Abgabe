@@ -23,6 +23,19 @@ a {
     text-decoration: none;
 }
 
+.is-style-headline {
+    position: relative;
+}
+
+.is-style-headline::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 4px;
+    background-color: var(--primary);
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+}
 /* Images/Figures */
 
 figure {
@@ -145,6 +158,7 @@ img:not([src$=svg]) {
         overflow: visible;
         opacity: 1;
         pointer-events: auto;
+        text-transform: uppercase;
     }
 
     #nav-main a {
@@ -441,7 +455,7 @@ aside{
 
 #footer-page {
     margin-top: 80px;
-    padding: 2.5% 5%;
+    padding: 1.5% 5%;
     border-top: 1px #efefef solid;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -451,6 +465,7 @@ aside{
 
 #footer-page a {
     color: #efefef;
+
 }
 
 #footer-page a:hover {
@@ -459,13 +474,17 @@ aside{
 
 #nav-footer {
     text-align: center;
+   
+}
+
+#nav-footer a{
+    text-transform: uppercase;
 }
 
 
 
 @media screen and (min-width: 768px) {
     #nav-footer {
-        text-align: left;
         -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
         order: -1;
@@ -474,6 +493,7 @@ aside{
     #nav-footer .current-menu-item>a {
         color: #7000b6;
     }
+    
 }
 
 #nav-footer li {
@@ -561,11 +581,7 @@ aside{
     text-align: center;
 }
 
-@media screen and (min-width: 768px) {
-    .copyright {
-        text-align: right;
-    }
-}
+
 
 
 
@@ -613,8 +629,114 @@ aside{
 .social-links a {
     display: inline-block;
     margin: 0.2em;
-    font-size: 1.5em;
 }
+
+.instafb{
+    font-size: 1.5em;
+    margin: 0;
+}
+
+/*Header*/
+
+
+ .header-media-text {
+    text-align: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 820px) {
+    .header-media-text {
+        height: calc(100vh - 100px);
+    }
+}
+
+.header-media-text .header-media {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .header-media-text .header-text {
+        text-align: left;
+        
+    }
+}
+
+.header-media-text h1 {
+    margin-bottom: 0;
+}
+
+.header-media-text .name {
+    color: #efefef;
+}
+
+.header-media-text .work {
+    font-size: 1rem;
+    font-weight: 300;
+    display: block;
+    margin: 0.3em 0 1em;
+}
+
+.blockheader{
+    display: block;
+    text-align:center;
+    margin-top: 2.5%;
+    position: relative;
+}
+
+.blockheader img {
+    width: 100%;
+}
+.name{
+visibility: hidden;
+position: absolute;
+bottom: 15%;
+left: 5%;
+background-color: rgba(21, 94, 98, 0.6);
+color: #efefef;
+padding: 12px;
+font-size: 1.7em;}
+
+.name2{
+    visibility: hidden;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    background-color: rgba(21, 94, 98, 0.6);
+    color: #efefef;
+    padding: 12px;
+    font-size: 1.7em;
+    }
+
+
+    @media screen and (min-width: 900px) {
+        .name2{
+            visibility: visible;
+        }
+        
+        .name{
+            visibility: visible;
+        }
+        
+    }
+/*
+* Animation
+*/
+
+.js .animate {
+    opacity: 0;
+    transition: opacity 1s linear, transform 1s linear;
+    transition-delay: 200ms;
+    transform: translateY(2rem);
+}
+
+.js .animate.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
 /* Navigation Breakpoint */
 @media screen and (min-width: 900px) {
@@ -634,44 +756,7 @@ aside{
 
     }
 
-    #footer{
-        height: 80px;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        text-align: center;
-        justify-content: space-between;
-        gap: 2em;
-        align-items: center;
-        color: #efefef;
-        position: relative;
-    }
-
-    .contact-footer{
-        position: absolute;
-        top: auto;
-        left: 38%;
-    }
-
-    #footer img{
-        display: inline-block;
-        border-radius: 50%;
-        width: 25%;
-
-    }
-
-    #footer p{
-        display: block;
-     }
-
-
-    .links-footer{
-        display: flex;
-        gap: 1.5em;
-        text-transform: uppercase;
-        
-    }
+    
     
 
     .figure-relative{

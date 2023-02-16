@@ -211,3 +211,58 @@ if (function_exists('acf_add_options_page')) {
     ));
 
     
+/* ACF Option Page erstellen
+    * https://www.advancedcustomfields.com/resources/acf_add_options_page/
+    */
+    acf_add_options_page(array(
+        'page_title' => 'Adresse',
+        'menu_title' => 'Adresse',
+        'menu_slug' => 'webdev-adress',
+        'capability' => 'edit_posts',
+        'position' => 51,
+        'icon_url' => 'yes', // https://developer.wordpress.org/resource/dashicons/
+        'update_button' => __( 'Änderungen speichern', 'wifi' ),
+        'updated_message' => __( 'Änderungen wurden gespeichert', 'wifi' )
+    ));
+
+  /* Hinzufügen von Gutenberg-Block-Kategorie */ 
+  add_filter( 'block_categories_all', function($categories){
+
+    return array_merge(
+            array(
+                array(
+                    'slug' => 'wifi',
+                    'title' => 'wifi'
+                )
+                ),
+                $categories
+            );
+
+}, 10, 2 );
+
+/* ACF-Gutenberg-Blöcke erstellen : */ 
+
+add_action ( 'acf/init', function (){
+
+
+    if ( function_exists('acf_register_block_type')  ) {
+        
+        /* register block "Header" */ 
+        acf_register_block_type(array(
+                'name' => 'haas_header',
+                'title' =>  __('Header', 'wifi'),
+                'description' => __('Haas Header', 'wifi'),
+                'supports' => array('anchor' => false),
+                'category' => 'wifi',
+                'keywords' => array('header', 'haas'),
+                'post_types' => array('page'),
+                'align' => false,
+                'mode' => false,
+                'icon' => 'welcome-widget-menus',
+                'render_template' => 'template-parts/block-header.php'
+        ) );
+    }
+
+} );
+
+

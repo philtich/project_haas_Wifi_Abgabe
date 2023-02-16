@@ -11,29 +11,34 @@
                     */
 
             $links = get_field('social', 'option');
+
+            $adr = get_field('adresse', 'option');
             ?>
-            
+            <div class="instafb">
             <?php if ($links['instagram']) : ?>
                 <a href="<?php echo $links['instagram']; ?>" target="_blank">
                     <span class="icon-instagram" aria-hidden="true"></span>
                     <span class="screen-reader-text"><?php _e('Follow on Instagram', 'wifi') ?></span>
                 </a>
-            <?php endif; ?>
-            <?php if ($links['facebook']) : ?>
+                <?php if ($links['facebook']) : ?>
                 <a href="<?php echo $links['facebook']; ?>" target="_blank">
                     <span class="icon-facebook" aria-hidden="true"></span>
                     <span class="screen-reader-text"><?php _e('Follow on Facebook', 'wifi') ?></span>
                 </a>
                 <?php endif; ?>
-                <?php if ($links['twitter']) : ?>
-                <a href="<?php echo $links['twitter']; ?>" target="_blank">
-                    <span class="icon-twitter" aria-hidden="true"></span>
-                    <span class="screen-reader-text"><?php _e('Follow on Twitter', 'wifi') ?></span>
-                </a>
+                </div>
+                
+            <?php endif; ?>
+            <?php if ($adr['street']) : ?>
+                <span><?php echo $adr['street']; ?> </span></br>
+                <span><?php echo $adr['plz']; ?> </span></br>
+                <a href="mailto:christianhaas@gmail.com"><?php echo $adr['email']; ?> </a></br>
+                <a href="tel:<?php echo $adr['telefon']; ?> "><?php echo $adr['telefon']; ?> </a>
+               
+                    
                 <?php endif; ?>
             
         </div>
-
         
     <nav id="nav-footer" class="column">
         <?php 

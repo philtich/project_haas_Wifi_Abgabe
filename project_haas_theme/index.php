@@ -7,9 +7,12 @@
 
 
     <main id="content" class="container">
+    
 
-
-        <h1 class="is-style-headline"><?php /*
+        <h1 class="is-style-headline">
+            
+            
+            <?php /*
             * Mit get_option() können die WP Option-Fields abgerufen werden
             * die Option "page_for_posts" liefert die ID der Seite, die als Beiitragsseite eingestellt wurde
             * https://developer.wordpress.org/reference/functions/get_option/
