@@ -736,41 +736,27 @@ font-size: 1.7em;}
 
  .service {
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     color: #efefef;
+    text-align: center;
+    border: 1px #efefef solid;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .service .service-icon {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 110px;
     height: 110px;
-    background-color: var(--secondary);
     border-radius: 50%;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    font-size: 2em;
-    color: var(--primary);
+    margin: 0 auto;
+  
+    
 }
 
 .service .service-title {
     font-size: 1.176em;
-    -webkit-transform: translateX(-20px);
-    transform: translateX(-20px);
-    -webkit-transition: -webkit-transform 200ms linear;
-    transition: -webkit-transform 200ms linear;
-    transition: transform 200ms linear;
-    transition: transform 200ms linear, -webkit-transform 200ms linear;
+    text-align: center;
+    margin: 0;
 }
 
 .service a {
@@ -782,10 +768,7 @@ font-size: 1.7em;}
     left: 0;
 }
 
-.service:hover .service-title {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-}
+
 
 .serve1{
  margin: 0 5%;
@@ -801,7 +784,6 @@ font-size: 1.7em;}
         -ms-flex-direction: column;
         flex-direction: column;
         background-color: rgba(21, 94, 98, 0.4);
-        padding: 2rem 1rem;
         border-radius: 12px;
         -webkit-transition: -webkit-box-shadow 200ms linear;
         transition: -webkit-box-shadow 200ms linear;
@@ -810,34 +792,15 @@ font-size: 1.7em;}
     }
 
     .service:hover {
-        -webkit-box-shadow: 0 3px 6px rgba(255, 255, 255, 0.2);
-        box-shadow: 0 3px 6px rgba(255, 255, 255, 0.2);
+        -webkit-box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+        box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
     }
 
-    .service .service-icon {
+   .service-icon {
         width: 120px;
         height: 120px;
-        font-size: 4em;
-        background-color: var(--base-bg);
-    }
-
-    .service [class*=icon-] {
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
-        -webkit-transition: -webkit-transform 200ms linear;
-        transition: -webkit-transform 200ms linear;
-        transition: transform 200ms linear;
-        transition: transform 200ms linear, -webkit-transform 200ms linear;
-    }
-
-    .service:hover [class*=icon-] {
-        -webkit-transform: translateX(0) translateY(0);
-        transform: translateX(0) translateY(0);
-    }
-
-    .service .service-title {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+        margin-right: 10px;
+        text-align: center;
     }
 
 }
