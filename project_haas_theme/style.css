@@ -734,6 +734,10 @@ font-size: 1.7em;}
  * SERVICES
  */
 
+ .services{
+    margin-top: 50px;
+ }
+
  .service {
     position: relative;
     color: #efefef;
@@ -741,6 +745,7 @@ font-size: 1.7em;}
     border: 1px #efefef solid;
     padding-top: 20px;
     padding-bottom: 20px;
+   
 }
 
 .service .service-icon {
@@ -806,116 +811,97 @@ font-size: 1.7em;}
 }
 
 
+/* ******************
+ * POSTS
+ */
 
-/* Navigation Breakpoint */
-@media screen and (min-width: 900px) {
-    
-    body {
-        padding-top: 100px; 
-    }
+ .post {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--secondary);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 1.5em;
+    -webkit-transition: -webkit-box-shadow 200ms linear;
+    transition: -webkit-box-shadow 200ms linear;
+    transition: box-shadow 200ms linear;
+    transition: box-shadow 200ms linear, -webkit-box-shadow 200ms linear;
+}
 
-    
+.post:hover {
+    -webkit-box-shadow: 0 3px 6px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.2);
+}
 
-    #main img{
-        display: none;
+.post .post-title {
+    margin: 0 0 0.2em;
+    font-weight: 400;
+}
 
-    }
-    #main a{
-        display: none;
+.post .post-title a {
+    color: var(--base);
+}
 
-    }
+.post .meta>*,
+.single-post .meta>* {
+    display: inline-block;
+    font-size: 0.85em;
+}
 
-    
-    
+.post .meta .date,
+.single-post .meta .date {
+    margin-right: 0.6em;
+    padding-right: 0.6em;
+    border-right: 1px solid var(--base);
+}
 
-    .figure-relative{
-        display: block;
-        position: relative;
-        width: 100%;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-    }
+.single-post .meta {
+    margin-bottom: 4em;
+}
 
-    .figcaption-header{
-        position: absolute;
-        top: 100px;
-        left: 120px;
-        color: #efefef;
-        background-color: rgba(21, 94, 98, 0.8);
-        font-size: 46px;
-        padding: 6px;
-    }
-    .figcaption-header2{
-        position: absolute;
-        bottom: 100px;
-        left: 40px;
-        color: #efefef;
-        background-color: rgba(21, 94, 98, 0.8);
-        font-size: 46px;
-        padding: 6px;
-    }
+.single-post .meta.tags {
+    margin-top: 4em;
+}
 
-    #header-img{
-        width: 100%;
-    }
 
-    aside {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-top: 2.5%;
-        padding-bottom: 2.5%;
-        gap: 1.5em;
-        position: relative;
-        background-color: #155e62;
-        border-top: 1px #efefef solid;
-        border-bottom: 1px #efefef solid;
-    }
+/* ******************
+ * PAGINATION
+ */
 
-    
-    .reference1-aside{
-        display:block;
-        border-radius: 50%;
-       
+.pagination {
+    margin-top: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 1.2em;
+}
 
-    }
+.pagination>* {
+    display: inline-block;
+    padding: 0.2em 0.4em;
+}
 
-    .div-aside{
-       color: #155e62;
-       font-style: italic;
-       font-size: 20px;
-        
-     }
+.pagination a {
+    color: inherit;
+}
 
-     .p-aside{
-        background-color: rgba(239, 239, 239, 0.8);
-        position: relative;
-        padding: 8px;
+.pagination a:hover {
+    color: var(--primary);
+    text-decoration: none;
+}
 
-     }
+.pagination .current {
+    color: #efefef;
+    font-weight: 600;
+}
 
-     aside .div-aside span{
-        font-style: normal;
-        font-weight: bold;
-        padding: 2px;
-     }
 
-     .button-top{
-        display: none;
-     }
 
-     .link-coaching{
-        display: none;
 
-     }
 
-     aside{
-        margin: 0;
-        padding: 0 2,5%;
-     }
-
-}   

@@ -277,6 +277,21 @@ add_action ( 'acf/init', function (){
                 'icon' => 'yes',
                 'render_template' => 'template-parts/block-services.php'
         ) );
+
+                     /* register block "Latest Posts" */ 
+                     acf_register_block_type(array(
+                        'name' => 'webdev_latestposts',
+                        'title' =>  __('Letzte Blog-Beiträge', 'wifi'),
+                        'description' => __('Letzte Beiträge', 'wifi'),
+                        'supports' => array ('anchor' => true),
+                        'category' => 'wifi',
+                        'keywords' => array('posts', 'Beiträge', 'blog', 'news'),
+                        'post_types' => array('page', 'posts'),
+                        'align' => false,
+                        'mode' => false,
+                        'icon' => 'pressthis',
+                        'render_template' => 'template-parts/block-posts.php'
+                ) );
     }
 
 
