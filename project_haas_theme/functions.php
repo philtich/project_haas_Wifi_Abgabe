@@ -261,7 +261,25 @@ add_action ( 'acf/init', function (){
                 'icon' => 'welcome-widget-menus',
                 'render_template' => 'template-parts/block-header.php'
         ) );
+
+
+              /* register block "Services" */ 
+              acf_register_block_type(array(
+                'name' => 'haas_services',
+                'title' =>  __('Services', 'wifi'),
+                'description' => __('Services 3 Spalten', 'wifi'),
+                'supports' => array('anchor' => true),
+                'category' => 'wifi',
+                'keywords' => array('services', 'spalten', 'columns', 'teaser', 'Leistungen'),
+                'post_types' => array('page'),
+                'align' => false,
+                'mode' => false,
+                'icon' => 'yes',
+                'render_template' => 'template-parts/block-services.php'
+        ) );
     }
+
+
 
 } );
 
