@@ -22,7 +22,7 @@ $news_query = new WP_Query($args);
 
 if($news_query->have_posts()): ?>
 <section <?php echo $anchor;?> class="<?php echo $class_name; ?>">
-<h2 class="is-style-headline"><?php _e('Meine Blog', 'wifi') ?></h2>
+<h2 class="is-style-headline"><?php _e('Mein Blog', 'wifi') ?></h2>
 <?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
 <article class="post">
 <?php the_title(sprintf('<h3 class="post-title"><a href="%s">', esc_url(get_permalink())), '</a></h3>');?>

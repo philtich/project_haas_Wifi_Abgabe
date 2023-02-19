@@ -307,143 +307,14 @@ img:not([src$=svg]) {
     height:100%;
 }
 
-#main-image{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    border-radius: 50%;
-}
 
 h1{
     color: #efefef;
     text-align: center;
 }
 
-.coaching{
-    text-align: center;
-}
-.link-contact{
-    text-align: center;
-}
-
-.link-contact a{
-    color: #efefef;
-    text-decoration: none;
-}
-
-.div-section{
-    text-align: center;
-}
-
-.div-section p{
-    display: inline;
-}
-
-#footer{
-    background-color: #155e62;
-    height: 100%;
-    text-align: center;
-    margin: 5%;
-
-}
-#footer span{
-    text-align: center;
-    color: #efefef;
-}
-#footer a{
-    text-align: center;
-    color: #efefef;
-    text-decoration: none;
-}
-
-#footer img{
-    display:none;
-}
-
-.index-section{
-    display: block;
-    color: #efefef;
-    margin: 5%;
-    font-size: 20px;
-}
-
-.index-section h2{
-    text-align: center;
-}
-
-.link-coaching{
-    width: 240px;
-    height: 60px;;
-    background-color: #efefef;
-    color: #155e62;
-    border: 2px #155e62 solid;
-    display: inline-flex;
-    align-items: center;
-   justify-content: center;
-    
-}
-.link-coaching a{
-    text-decoration: none;
-    color: #155e62;
-    font-size: 24px;
-}
 
 
-figure {
-    display: none;
-}
-
-aside{
-    text-align: center;
-    color: #efefef;
-    border-top: 1px #efefef solid;
-    border-bottom: 1px #efefef solid;
-    margin: 5%;
-    padding: 2.5%;
-   height: 280px;
-  
-    
-
-}
-
-.div-aside{
-    color: #efefef;
-    font-style: italic;
-     
-  }
-
-  .div-aside span{
-    font-weight: bold;
-    font-style: normal‚;
-  }
-
-.reference1-aside{
-    border-radius: 50%;
-    width: 120px;
-    border: 1px #efefef solid;
-    float: right;
-    margin: 2.5%;
-
-    
-}
-
-.reference2-aside{
-    border-radius: 50%;
-    width: 120px;
-    border: 1px #efefef solid;
-    float: left;
-    margin: 2.5%;}
-
-.reference3-aside{
-    border-radius: 50%;
-    width: 120px;
-    border: 1px #efefef solid;
-    float: right;
-    margin: 2.5%;
-  
-   
-}
 
 /*Footer*/
 
@@ -745,6 +616,7 @@ font-size: 1.7em;}
     border: 1px #efefef solid;
     padding-top: 20px;
     padding-bottom: 20px;
+    border-radius: 12px;
    
 }
 
@@ -815,52 +687,69 @@ font-size: 1.7em;}
  * POSTS
  */
 
+ .posts{
+    margin-top: 50px;
+
+ }
+
  .post {
     position: relative;
     overflow: hidden;
-    background-color: var(--secondary);
+    color: #efefef;
+    border: 1px #efefef solid;
     border-radius: 12px;
     padding: 1rem;
-    margin-top: 1.5em;
+    margin-top: 15px;
+    margin-right: 5%;
+    margin-left: 5%;
     -webkit-transition: -webkit-box-shadow 200ms linear;
     transition: -webkit-box-shadow 200ms linear;
     transition: box-shadow 200ms linear;
     transition: box-shadow 200ms linear, -webkit-box-shadow 200ms linear;
+    
 }
 
 .post:hover {
-    -webkit-box-shadow: 0 3px 6px rgba(255, 255, 255, 0.2);
-    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.2);
+    -webkit-box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
 }
 
 .post .post-title {
     margin: 0 0 0.2em;
     font-weight: 400;
+    color: #efefef;
 }
 
-.post .post-title a {
-    color: var(--base);
+.post-title> a{
+    color:#efefef;
 }
+
 
 .post .meta>*,
 .single-post .meta>* {
     display: inline-block;
     font-size: 0.85em;
+    color: #efefef;
 }
 
 .post .meta .date,
 .single-post .meta .date {
     margin-right: 0.6em;
     padding-right: 0.6em;
-    border-right: 1px solid var(--base);
+    border-right: 1px #efefef solid;
+    color: #efefef;
 }
 
 .single-post .meta {
     margin-bottom: 4em;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .single-post .meta.tags {
     margin-top: 4em;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 
@@ -880,6 +769,7 @@ font-size: 1.7em;}
     -ms-flex-pack: center;
     justify-content: center;
     font-size: 1.2em;
+    color: #efefef;
 }
 
 .pagination>* {
@@ -892,12 +782,11 @@ font-size: 1.7em;}
 }
 
 .pagination a:hover {
-    color: var(--primary);
     text-decoration: none;
 }
 
 .pagination .current {
-    color: #efefef;
+    color: #7000b6;
     font-weight: 600;
 }
 
