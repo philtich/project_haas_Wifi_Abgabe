@@ -1,10 +1,9 @@
 @font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?7wtzmn');
-  src:  url('fonts/icomoon.eot?7wtzmn#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?7wtzmn') format('truetype'),
-    url('fonts/icomoon.woff?7wtzmn') format('woff'),
-    url('fonts/icomoon.svg?7wtzmn#icomoon') format('svg');
+  font-family: 'icons';
+  src:
+    url('fonts/icons.ttf?8f23bl') format('truetype'),
+    url('fonts/icons.woff?8f23bl') format('woff'),
+    url('fonts/icons.svg?8f23bl#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -12,7 +11,7 @@
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: 'icons' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -25,73 +24,33 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-mail:before {
+.icon-arrow-left:before {
   content: "\e900";
 }
-.icon-contact:before {
-  content: "\e900";
+.icon-arrow-right:before {
+  content: "\e901";
+}
+.icon-design:before {
+  content: "\e90c";
+}
+.icon-more-link:before {
+  content: "\e968";
 }
 .icon-support:before {
-  content: "\e900";
+  content: "\e995";
 }
-.icon-newsletter:before {
-  content: "\e900";
-}
-.icon-letter:before {
-  content: "\e900";
-}
-.icon-email:before {
-  content: "\e900";
-}
-.icon-envelop:before {
-  content: "\e900";
-}
-.icon-social:before {
-  content: "\e900";
-}
-.icon-phone:before {
-  content: "\e901";
-}
-.icon-telephone:before {
-  content: "\e901";
-}
-.icon-contact1:before {
-  content: "\e901";
-}
-.icon-support1:before {
-  content: "\e901";
-}
-.icon-call:before {
-  content: "\e901";
-}
-.icon-instagram:before {
-  content: "\e902";
-}
-.icon-brand:before {
-  content: "\e902";
-}
-.icon-social1:before {
-  content: "\e902";
+.icon-coding:before {
+  content: "\ea80";
 }
 .icon-facebook:before {
+  content: "\e902";
+}
+.icon-github:before {
   content: "\e903";
 }
-.icon-brand1:before {
-  content: "\e903";
-}
-.icon-social2:before {
-  content: "\e903";
-}
-.icon-twitter:before {
+.icon-instagram:before {
   content: "\e904";
 }
-.icon-brand2:before {
-  content: "\e904";
-}
-.icon-tweet:before {
-  content: "\e904";
-}
-.icon-social3:before {
-  content: "\e904";
-
+.icon-linkedin:before {
+  content: "\e905";
 }

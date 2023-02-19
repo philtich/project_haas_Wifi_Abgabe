@@ -1,5 +1,6 @@
 <?php get_header(); // WordPress Funktion zum Einbinden der header.php  ?>
     <main id="content" class="container">
+        <div class="blockcontainer">
         <?php
         /* Mit the_title() wird der Beitrags-Titel ausgegeben
          * https://developer.wordpress.org/reference/functions/the_title/
@@ -35,6 +36,7 @@
          */
         the_tags('<div class="meta tags">#', ' #', '</div>');
         ?>
+        </div>
 
     </main>
 <?php get_footer(); // WordPress Funktion zum Einbinden der footer.php
