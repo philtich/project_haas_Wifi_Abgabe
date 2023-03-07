@@ -23,7 +23,14 @@ a {
     text-decoration: none;
 }
 
+
 .is-style-headline {
+    position: relative;
+    text-align: center;
+    color: #efefef;
+}
+
+h2{
     position: relative;
     text-align: center;
     color: #efefef;
@@ -837,3 +844,15 @@ main input {
 }
 
 
+/* Textarea */
+
+
+.textareaclass{
+    margin: 2.5% 5%;
+    color: #efefef;
+    text-align: center;
+}
+
+.textareaimage{
+    border-radius: 50%;
+}

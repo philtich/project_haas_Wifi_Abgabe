@@ -278,6 +278,38 @@ add_action ( 'acf/init', function (){
                 'render_template' => 'template-parts/block-services.php'
         ) );
 
+        /* register block "Textarea" */ 
+        acf_register_block_type(array(
+            'name' => 'haas_textarea',
+            'title' =>  __('Textarea', 'wifi'),
+            'description' => __('Haas Textarea', 'wifi'),
+            'supports' => array('anchor' => false),
+            'category' => 'wifi',
+            'keywords' => array('textarea', 'haas'),
+            'post_types' => array('page'),
+            'align' => false,
+            'mode' => false,
+            'icon' => 'welcome-widget-menus',
+            'render_template' => 'template-parts/block-textarea.php'
+    ) );
+
+    /* register block "Steckbrief" */ 
+    acf_register_block_type(array(
+        'name' => 'haas_steckbrief',
+        'title' =>  __('Steckbrief', 'wifi'),
+        'description' => __('Haas Steckbrief', 'wifi'),
+        'supports' => array('anchor' => false),
+        'category' => 'wifi',
+        'keywords' => array('steckbrief', 'haas'),
+        'post_types' => array('page'),
+        'align' => false,
+        'mode' => false,
+        'icon' => 'welcome-widget-menus',
+        'render_template' => 'template-parts/block-steckbrief.php'
+) );
+
+         
+
                      /* register block "Latest Posts" */ 
                      acf_register_block_type(array(
                         'name' => 'webdev_latestposts',
