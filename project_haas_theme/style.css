@@ -23,6 +23,11 @@ a {
     text-decoration: none;
 }
 
+.btn {
+    margin: 5%;
+    font-size: 1.2em;
+}
+
 
 .is-style-headline {
     position: relative;
@@ -855,4 +860,14 @@ main input {
 
 .textareaimage{
     border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+
+    .textareaimage{
+        width: 50%;
+        max-width: 100%;
+    }
+
+
 }

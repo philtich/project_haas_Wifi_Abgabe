@@ -308,6 +308,21 @@ add_action ( 'acf/init', function (){
         'render_template' => 'template-parts/block-steckbrief.php'
 ) );
 
+ /* register block "Erfolge" */ 
+ acf_register_block_type(array(
+    'name' => 'haas_erfolge',
+    'title' =>  __('Erfolge', 'wifi'),
+    'description' => __('Haas Erfolge', 'wifi'),
+    'supports' => array('anchor' => false),
+    'category' => 'wifi',
+    'keywords' => array('erfolge', 'haas'),
+    'post_types' => array('page'),
+    'align' => false,
+    'mode' => false,
+    'icon' => 'welcome-widget-menus',
+    'render_template' => 'template-parts/block-erfolge.php'
+) );
+
          
 
                      /* register block "Latest Posts" */ 
