@@ -22,16 +22,15 @@ if (!empty($block['className'])) {
 $erfolge = get_field('erfolge');
 if (!empty($erfolge)) : ?>
     <div class="<?php echo $class_name ?>">
-    
-            <h1><?php
+            <br>
+            <details>
+            <summary>
+                <h3><?php
                 
                 echo $erfolge['headline'];
                 
-                ?></h1>
-                <?php if ($erfolge['name']) {
-                    echo ' <h2>'  . $erfolge['headline'] . '</h2>';
-                }
-                ?>
+                ?></h3>
+            </summary>
                  <?php if ($erfolge['race1']) {
                     echo ' <p class="textareaclass">'  . $erfolge['race1'] . '</p>';
                 }
@@ -65,7 +64,7 @@ if (!empty($erfolge)) : ?>
                 }
                 ?>
                 
-                
+            </details>          
     </div>
      
 
@@ -77,4 +76,6 @@ if (!empty($erfolge)) : ?>
  */
 elseif (is_admin()) : ?>
     <h2 class="empty-block"><?php _e('Block bearbeiten &raquo;', 'wifi') ?></h2>
-<?php endif;
+<?php endif; ?>
+
+<br>

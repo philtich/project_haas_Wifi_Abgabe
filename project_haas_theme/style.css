@@ -39,6 +39,7 @@ h2{
     position: relative;
     text-align: center;
     color: #efefef;
+    margin: 5% 5% 2.5% 5%;
 }
 
 
@@ -699,11 +700,6 @@ font-size: 1.7em;}
  * POSTS
  */
 
- .posts{
-    margin-top: 50px;
-
- }
-
  .post {
     position: relative;
     overflow: hidden;
@@ -853,9 +849,9 @@ main input {
 
 
 .textareaclass{
-    margin: 2.5% 5%;
     color: #efefef;
     text-align: center;
+    margin: 2.5% 5%;
 }
 
 .textareaimage{
@@ -865,9 +861,15 @@ main input {
 @media screen and (min-width: 768px) {
 
     .textareaimage{
-        width: 50%;
-        max-width: 100%;
+        width: 30%;
+        
     }
 
 
+}
+
+
+/* Carousel */
+.wpcp-carousel-wrapper{
+    margin: 2.5% 5%;
 }
