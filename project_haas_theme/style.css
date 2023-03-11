@@ -23,6 +23,8 @@ a {
     text-decoration: none;
 }
 
+
+
 .btn {
     margin: 5%;
     font-size: 1.2em;
@@ -400,6 +402,8 @@ h1{
     text-transform: uppercase;
     font-size: 0.8em;
     cursor: pointer;
+    background-color:#efefef;
+    color: #155e62;
     opacity: 0;
     pointer-events: none;
     -webkit-transition: opacity 200ms ease-in-out, -webkit-transform 200ms linear;
@@ -419,9 +423,11 @@ h1{
 }
 
 /* Columns */
+
 .columns>.column {
     margin-top: 15px;
 }
+
 
 @media screen and (min-width: 768px) {
     .columns {
@@ -849,10 +855,15 @@ main input {
 
 
 .textareaclass{
+    display: block;
     color: #efefef;
     text-align: center;
     margin: 2.5% 5%;
+    
 }
+
+
+
 
 .textareaimage{
     border-radius: 50%;
@@ -873,3 +884,4 @@ main input {
 .wpcp-carousel-wrapper{
     margin: 2.5% 5%;
 }
+

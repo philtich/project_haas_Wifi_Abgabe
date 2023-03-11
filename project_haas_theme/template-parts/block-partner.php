@@ -19,44 +19,16 @@ if (!empty($block['className'])) {
  * ACF Gruppe-Feld in Variable speichern – Rückgabewert ist ein Array
  * https://www.advancedcustomfields.com/resources/group/
  */
-$steckbrief = get_field('steckbrief');
-if (!empty($steckbrief)) : ?>
+$partner = get_field('partner');
+if (!empty($partner)) : ?>
     <div class="<?php echo $class_name ?>">
     
-            <h1><?php
+            <h3><?php
                 
-                echo $steckbrief['headline'];
+                echo $partner['headline'];
                 
-                ?></h1>
-                <?php if ($steckbrief['name']) {
-                    echo ' <h3>'  . $steckbrief['name'] . '</h3>';
-                }
-                ?>
-                 <?php if ($steckbrief['geburtstag']) {
-                    echo ' <p class="textareaclass">'  . '<b>Geboren am: </b>' .$steckbrief['geburtstag'] . '</p>';
-                }
-                ?>
-                 <?php if ($steckbrief['geburtsort']) {
-                    echo ' <p class="textareaclass">'  . '<b>Geburtsort:</b> ' .$steckbrief['geburtsort'] . '</p>';
-                }
-                ?>
-                 <?php if ($steckbrief['ausbildung']) {
-                    echo ' <p class="textareaclass">'  .  '<b>Ausbildungen: </b><br>' . $steckbrief['ausbildung'] . '</p>';
-                }
-                ?>
-                 <?php if ($steckbrief['hobbies']) {
-                    echo ' <p class="textareaclass">'  . '<b>Hobbies: </b>' .$steckbrief['hobbies'] . '</p>';
-                }
-                ?>
-                 <?php if ($steckbrief['lebensmotto']) {
-                    echo ' <p class="textareaclass">'  . '<b>Lebensmotto: </b>' .$steckbrief['lebensmotto'] . '</p>';
-                }
-                ?>
+                ?></h3>
                 
-                
-        <br>
-            
-        
         <?php
         /*
         * Bild von ACF Feld ausgeben – Einstellung für Rückgabewert beim ACF Feld = ID (das bedeutet wir bekommen die Bild-ID als Rückgabewert)
@@ -67,9 +39,17 @@ if (!empty($steckbrief)) : ?>
         * Parameter1: Bild-ID (aus dem ACF-Feld), Parameter2: Bildgröße, Parameter3: rückgabe als Icon, Parameter4: Attribute (array)
         * https://developer.wordpress.org/reference/functions/wp_get_attachment_image/
         */
-        echo wp_get_attachment_image($steckbrief['image'], 'medium_large', false, ['class' => 'textareaimage'])
+        echo wp_get_attachment_image($partner['image'], 'medium_large', false, ['class' => 'textareaimage'])
         ?>
-        
+
+<?php   if ($partner['link']) {
+                echo '<a href="' . $partner['link'] . '" class="textareaclass" style="display:block" target="_blank">' . __('Zur Website', 'wifi') . '</a>';
+            } ?>
+
+            <br>
+               
+
+       
     </div>
      
 
