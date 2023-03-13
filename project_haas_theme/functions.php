@@ -338,6 +338,35 @@ acf_register_block_type(array(
     'render_template' => 'template-parts/block-partner.php'
 ) );
 
+/* register block "Pakete" */ 
+acf_register_block_type(array(
+    'name' => 'haas_pakete',
+    'title' =>  __('Pakete', 'wifi'),
+    'description' => __('Haas Pakete', 'wifi'),
+    'supports' => array('anchor' => false),
+    'category' => 'wifi',
+    'keywords' => array('pakete', 'haas'),
+    'post_types' => array('page'),
+    'align' => false,
+    'mode' => false,
+    'icon' => 'welcome-widget-menus',
+    'render_template' => 'template-parts/block-pakete.php'
+) );
+
+/* register block "Stunden" */ 
+acf_register_block_type(array(
+    'name' => 'haas_stunden',
+    'title' =>  __('Stunden', 'wifi'),
+    'description' => __('Haas Stunden', 'wifi'),
+    'supports' => array('anchor' => false),
+    'category' => 'wifi',
+    'keywords' => array('stunden', 'haas'),
+    'post_types' => array('page'),
+    'align' => false,
+    'mode' => false,
+    'icon' => 'welcome-widget-menus',
+    'render_template' => 'template-parts/block-stunden.php'
+) );
          
 
                      /* register block "Latest Posts" */ 

@@ -66,3 +66,4 @@ elseif (is_admin()) : ?>
     <h2 class="empty-block"><?php _e('Block bearbeiten &raquo;', 'wifi') ?></h2>
 <?php endif;
 
+?>
