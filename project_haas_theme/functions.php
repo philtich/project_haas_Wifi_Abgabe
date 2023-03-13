@@ -367,6 +367,21 @@ acf_register_block_type(array(
     'icon' => 'welcome-widget-menus',
     'render_template' => 'template-parts/block-stunden.php'
 ) );
+
+/* register block "Kurse" */ 
+acf_register_block_type(array(
+    'name' => 'haas_kurse',
+    'title' =>  __('Kurse', 'wifi'),
+    'description' => __('Haas Kurse', 'wifi'),
+    'supports' => array('anchor' => false),
+    'category' => 'wifi',
+    'keywords' => array('kurse', 'haas'),
+    'post_types' => array('page'),
+    'align' => false,
+    'mode' => false,
+    'icon' => 'welcome-widget-menus',
+    'render_template' => 'template-parts/block-kurse.php'
+) );
          
 
                      /* register block "Latest Posts" */ 

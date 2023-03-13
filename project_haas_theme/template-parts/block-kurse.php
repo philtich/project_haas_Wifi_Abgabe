@@ -1,4 +1,3 @@
-
 <?php
 /*
  * Ausgabe des ACF-Block
@@ -20,46 +19,38 @@ if (!empty($block['className'])) {
  * ACF Gruppe-Feld in Variable speichern – Rückgabewert ist ein Array
  * https://www.advancedcustomfields.com/resources/group/
  */
-$stunden = get_field('stunden');
-if (!empty($stunden)) : ?>
+$kurse = get_field('kurse');
+if (!empty($kurse)) : ?>
     
             
-    <?php if ($stunden['headline']) {
-                    echo ' <h3 class="textareaclass">'  . $stunden['headline'] . '</h3>';
+    <?php if ($kurse['headline']) {
+                    echo ' <h3 class="textareaclass">'  . $kurse['headline'] . '</h3>';
                 }
                 ?>
                 
-                 <?php if ($stunden['leistung1']) {
-                    echo ' <p class="textareaclass">'   . $stunden['leistung1'] . '</p>';
+                 <?php if ($kurse['leistung1']) {
+                    echo ' <p class="textareaclass">'   . $kurse['leistung1'] . '</p>';
                 }
                 ?>
             
-                <?php if ($stunden['leistung2']) {
-                    echo ' <p class="textareaclass">'   . $stunden['leistung2'] . '</p>';
+                <?php if ($kurse['leistung2']) {
+                    echo ' <p class="textareaclass">'   . $kurse['leistung2'] . '</p>';
                 }
                 ?>
-                <?php if ($stunden['leistung3']) {
-                    echo ' <p class="textareaclass">'   . $stunden['leistung3'] . '</p>';
+                <?php if ($kurse['leistung3']) {
+                    echo ' <p class="textareaclass">'   . $kurse['leistung3'] . '</p>';
                 }
                 ?>
-                <?php if ($stunden['leistung4']) {
-                    echo ' <p class="textareaclass">'   . $stunden['leistung4'] . '</p>';
+                <?php if ($kurse['leistung4']) {
+                    echo ' <p class="textareaclass">'   . $kurse['leistung4'] . '</p>';
                 }
                 ?>
-                <?php if ($stunden['leistung5']) {
-                    echo ' <p class="textareaclass">'   . $stunden['leistung5'] . '</p>';
+                <?php if ($kurse['preis']) {
+                    echo ' <p class="textareaclass" style="font-weight:bold; text-decoration: underline">' . 'Preis: '   . $kurse['preis'] . '</p>';
                 }
                 ?>
 
-</ul>
-                 
-            
-                 <?php if ($stunden['preis']) {
-                    echo ' <p class="textareaclass" style="font-weight: bold; text-decoration: underline" >' . '€' . $stunden['preis'] . ' pro Stunde' . '</p>';
-                }
-                ?>
 
-            
 <br>
      
 
