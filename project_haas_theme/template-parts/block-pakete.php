@@ -14,6 +14,10 @@ $class_name = 'textareaclass';
 if (!empty($block['className'])) {
     $class_name .= ' ' . esc_attr($block['className']);
 }
+$class_name = 'blocks';
+if (!empty($block['className'])) {
+    $class_name .= ' ' . esc_attr($block['className']);
+}
 
 /*
  * ACF Gruppe-Feld in Variable speichern – Rückgabewert ist ein Array
@@ -22,35 +26,35 @@ if (!empty($block['className'])) {
 $pakete = get_field('pakete');
 if (!empty($pakete)) : ?>
     
-            
+    <section class="blocks">    
     <?php if ($pakete['headline']) {
-                    echo ' <h3 class="textareaclass">'  . $pakete['headline'] . '</h3>';
+                    echo ' <h3>'  . $pakete['headline'] . '</h3>';
                 }
                 ?>
                 
                  <?php if ($pakete['leistung1']) {
-                    echo ' <p class="textareaclass">'   . $pakete['leistung1'] . '</p>';
+                    echo ' <p>'   . $pakete['leistung1'] . '</p>';
                 }
                 ?>
             
                 <?php if ($pakete['leistung2']) {
-                    echo ' <p class="textareaclass">'   . $pakete['leistung2'] . '</p>';
+                    echo ' <p>'   . $pakete['leistung2'] . '</p>';
                 }
                 ?>
                 <?php if ($pakete['leistung3']) {
-                    echo ' <p class="textareaclass">'   . $pakete['leistung3'] . '</p>';
+                    echo ' <p>'   . $pakete['leistung3'] . '</p>';
                 }
                 ?>
                 <?php if ($pakete['leistung4']) {
-                    echo ' <p class="textareaclass">'   . $pakete['leistung4'] . '</p>';
+                    echo ' <p>'   . $pakete['leistung4'] . '</p>';
                 }
                 ?>
                 <?php if ($pakete['leistung5']) {
-                    echo ' <p class="textareaclass">'   . $pakete['leistung5'] . '</p>';
+                    echo ' <p>'   . $pakete['leistung5'] . '</p>';
                 }
                 ?>
 
-</ul>
+          
                  
             
                  <?php if ($pakete['preis']) {
@@ -59,7 +63,8 @@ if (!empty($pakete)) : ?>
                 ?>
 
             
-<br>
+</section>
+
      
 
 <?php /* Bedingung: falls ACF Gruppen-Feld leer ist, sollte der Hinweis "Block bearbeiten" im Backend (Editor) angezeigt werden, sonst ist der Block nur in der "Listenansicht" (Editor) sichtbar/editierbar

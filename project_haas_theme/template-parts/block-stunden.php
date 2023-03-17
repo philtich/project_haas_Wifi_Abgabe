@@ -16,6 +16,11 @@ if (!empty($block['className'])) {
     $class_name .= ' ' . esc_attr($block['className']);
 }
 
+$class_name = 'blocks';
+if (!empty($block['className'])) {
+    $class_name .= ' ' . esc_attr($block['className']);
+}
+
 /*
  * ACF Gruppe-Feld in Variable speichern – Rückgabewert ist ein Array
  * https://www.advancedcustomfields.com/resources/group/
@@ -23,45 +28,46 @@ if (!empty($block['className'])) {
 $stunden = get_field('stunden');
 if (!empty($stunden)) : ?>
     
-            
+    <section class="blocks">      
     <?php if ($stunden['headline']) {
-                    echo ' <h3 class="textareaclass">'  . $stunden['headline'] . '</h3>';
+                    echo ' <h3>'  . $stunden['headline'] . '</h3>';
                 }
                 ?>
                 
                  <?php if ($stunden['leistung1']) {
-                    echo ' <p class="textareaclass">'   . $stunden['leistung1'] . '</p>';
+                    echo ' <p>'   . $stunden['leistung1'] . '</p>';
                 }
                 ?>
             
                 <?php if ($stunden['leistung2']) {
-                    echo ' <p class="textareaclass">'   . $stunden['leistung2'] . '</p>';
+                    echo ' <p>'   . $stunden['leistung2'] . '</p>';
                 }
                 ?>
                 <?php if ($stunden['leistung3']) {
-                    echo ' <p class="textareaclass">'   . $stunden['leistung3'] . '</p>';
+                    echo ' <p>'   . $stunden['leistung3'] . '</p>';
                 }
                 ?>
                 <?php if ($stunden['leistung4']) {
-                    echo ' <p class="textareaclass">'   . $stunden['leistung4'] . '</p>';
+                    echo ' <p>'   . $stunden['leistung4'] . '</p>';
                 }
                 ?>
                 <?php if ($stunden['leistung5']) {
-                    echo ' <p class="textareaclass">'   . $stunden['leistung5'] . '</p>';
+                    echo ' <p>'   . $stunden['leistung5'] . '</p>';
                 }
                 ?>
 
-</ul>
+         
                  
             
                  <?php if ($stunden['preis']) {
-                    echo ' <p class="textareaclass" style="font-weight: bold; text-decoration: underline" >' . '€' . $stunden['preis'] . ' pro Stunde' . '</p>';
+                    echo ' <p style="font-weight: bold; text-decoration: underline" >' . '€' . $stunden['preis'] . ' pro Stunde' . '</pstyle=>';
                 }
                 ?>
-
+                 
             
 <br>
      
+</section>
 
 <?php /* Bedingung: falls ACF Gruppen-Feld leer ist, sollte der Hinweis "Block bearbeiten" im Backend (Editor) angezeigt werden, sonst ist der Block nur in der "Listenansicht" (Editor) sichtbar/editierbar
  * Die Funktion "is_admin()" prüft ob der Code im Admin-Panel (wp-admin) ausgeführt wird

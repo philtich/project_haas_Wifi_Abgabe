@@ -15,19 +15,27 @@ if (!empty($block['className'])) {
     $class_name .= ' ' . esc_attr($block['className']);
 }
 
+$class_name = 'blocks';
+if (!empty($block['className'])) {
+    $class_name .= ' ' . esc_attr($block['className']);
+}
+
 /*
  * ACF Gruppe-Feld in Variable speichern – Rückgabewert ist ein Array
  * https://www.advancedcustomfields.com/resources/group/
  */
 $steckbrief = get_field('steckbrief');
 if (!empty($steckbrief)) : ?>
-    <div class="<?php echo $class_name ?>">
+    
     
             <h1><?php
                 
                 echo $steckbrief['headline'];
                 
                 ?></h1>
+
+                 
+    <section class="blocks"> 
                 <?php if ($steckbrief['name']) {
                     echo ' <h3>'  . $steckbrief['name'] . '</h3>';
                 }
@@ -53,7 +61,7 @@ if (!empty($steckbrief)) : ?>
                 }
                 ?>
                 
-                
+            
         <br>
             
         
@@ -69,8 +77,8 @@ if (!empty($steckbrief)) : ?>
         */
         echo wp_get_attachment_image($steckbrief['image'], 'medium_large', false, ['class' => 'textareaimage'])
         ?>
-        
-    </div>
+        </section>
+   
      
 
 <?php /* Bedingung: falls ACF Gruppen-Feld leer ist, sollte der Hinweis "Block bearbeiten" im Backend (Editor) angezeigt werden, sonst ist der Block nur in der "Listenansicht" (Editor) sichtbar/editierbar

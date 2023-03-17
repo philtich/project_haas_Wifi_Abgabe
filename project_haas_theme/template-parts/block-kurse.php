@@ -14,6 +14,11 @@ $class_name = 'textareaclass';
 if (!empty($block['className'])) {
     $class_name .= ' ' . esc_attr($block['className']);
 }
+$class_name = 'blocks';
+if (!empty($block['className'])) {
+    $class_name .= ' ' . esc_attr($block['className']);
+}
+
 
 /*
  * ACF Gruppe-Feld in Variable speichern – Rückgabewert ist ein Array
@@ -22,37 +27,37 @@ if (!empty($block['className'])) {
 $kurse = get_field('kurse');
 if (!empty($kurse)) : ?>
     
-            
+    <section class="blocks">
     <?php if ($kurse['headline']) {
-                    echo ' <h3 class="textareaclass">'  . $kurse['headline'] . '</h3>';
+                    echo ' <h3>'  . $kurse['headline'] . '</h3>';
                 }
                 ?>
                 
                  <?php if ($kurse['leistung1']) {
-                    echo ' <p class="textareaclass">'   . $kurse['leistung1'] . '</p>';
+                    echo ' <p>'   . $kurse['leistung1'] . '</p>';
                 }
                 ?>
             
                 <?php if ($kurse['leistung2']) {
-                    echo ' <p class="textareaclass">'   . $kurse['leistung2'] . '</p>';
+                    echo ' <p>'   . $kurse['leistung2'] . '</p>';
                 }
                 ?>
                 <?php if ($kurse['leistung3']) {
-                    echo ' <p class="textareaclass">'   . $kurse['leistung3'] . '</p>';
+                    echo ' <p>'   . $kurse['leistung3'] . '</p>';
                 }
                 ?>
                 <?php if ($kurse['leistung4']) {
-                    echo ' <p class="textareaclass">'   . $kurse['leistung4'] . '</p>';
+                    echo ' <p>'   . $kurse['leistung4'] . '</p>';
                 }
                 ?>
                 <?php if ($kurse['preis']) {
-                    echo ' <p class="textareaclass" style="font-weight:bold; text-decoration: underline">' . 'Preis: '   . $kurse['preis'] . '</p>';
+                    echo ' <p style="font-weight:bold; text-decoration: underline">' . 'Preis: '   . $kurse['preis'] . '</p>';
                 }
                 ?>
 
 
 <br>
-     
+            </section>
 
 <?php /* Bedingung: falls ACF Gruppen-Feld leer ist, sollte der Hinweis "Block bearbeiten" im Backend (Editor) angezeigt werden, sonst ist der Block nur in der "Listenansicht" (Editor) sichtbar/editierbar
  * Die Funktion "is_admin()" prüft ob der Code im Admin-Panel (wp-admin) ausgeführt wird
