@@ -57,8 +57,6 @@
     </div>
 
 </footer>
-<div id="to-top"><?php _e('Top', 'wifi'); ?></div>
-
 <?php wp_footer(); ?>
 </body>
 

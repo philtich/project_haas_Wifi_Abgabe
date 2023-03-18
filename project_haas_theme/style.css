@@ -392,42 +392,7 @@ h1{
     margin-left: 0;
 }
 
-/* ******************
- * TO TOP
- */
 
- #to-top {
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    z-index: 1000;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 60px;
-    text-transform: uppercase;
-    font-size: 0.8em;
-    cursor: pointer;
-    background-color:#efefef;
-    color: #155e62;
-    opacity: 0;
-    pointer-events: none;
-    -webkit-transition: opacity 200ms ease-in-out, -webkit-transform 200ms linear;
-    transition: opacity 200ms ease-in-out, -webkit-transform 200ms linear;
-    transition: opacity 200ms ease-in-out, transform 200ms linear;
-    transition: opacity 200ms ease-in-out, transform 200ms linear, -webkit-transform 200ms linear;
-}
-
-#to-top:hover {
-    -webkit-transform: translateY(-10%);
-    transform: translateY(-10%);
-}
-
-#to-top.show {
-    opacity: 1;
-    pointer-events: auto;
-}
 
 /* Columns */
 
@@ -611,21 +576,6 @@ font-size: 1.7em;}
         }
         
     }
-/*
-* Animation
-*/
-
-.js .animate {
-    opacity: 0;
-    transition: opacity 1s linear, transform 1s linear;
-    transition-delay: 200ms;
-    transform: translateY(2rem);
-}
-
-.js .animate.animated {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 /* ******************
  * SERVICES
@@ -912,11 +862,7 @@ font-size: 1.7em;}
         margin: 5% 25%;
         
     }
-
-
 }
-
-
 
 .impressum__imprint-container{
 
@@ -924,3 +870,10 @@ font-size: 1.7em;}
     margin: 5%;
     text-align: center;
 }
+
+
+
+
+
+
+

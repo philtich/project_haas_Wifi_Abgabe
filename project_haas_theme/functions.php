@@ -153,15 +153,6 @@ add_action('wp_enqueue_scripts', function () use ($version) {
     wp_enqueue_style('icons-css', get_template_directory_uri() . '/assets/icons/style.min.css');
     wp_enqueue_style('webdev-css', get_template_directory_uri() . '/style.css');
 
-    // Splidejs styles nur registrieren nicht ausgeben
-    wp_register_style('splide-css', get_template_directory_uri() . '/assets/css/splide.min.css');
-
-    // JS im Footer einfügen
-    wp_enqueue_script('webdev-js', get_template_directory_uri() . '/assets/js/scripts.js', [], $version, true);
-
-    // Splidejs js nur registrieren nicht ausgeben
-    wp_register_script('splide-js', get_template_directory_uri() . '/assets/js/splide.min.js',[], $version, true);
-
 });
 
 
