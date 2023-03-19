@@ -370,6 +370,8 @@ h1{
 
 
 
+
+
 @media screen and (min-width: 768px) {
     #nav-footer {
         -webkit-box-ordinal-group: 0;
@@ -491,6 +493,7 @@ h1{
     font-size: 1.5em;
     margin: 0;
 }
+
 
 /*Header*/
 

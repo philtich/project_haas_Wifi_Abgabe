@@ -21,7 +21,7 @@ if (!empty($block['className'])) {
  */
 $header = get_field('header');
 if (!empty($header)) : ?>
-    <header class="blockheader" class="<?php echo $class_name ?>">
+    <header class="blockheader w3-center w3-animate-zoom" class="<?php echo $class_name ?>">
     <div class="header-text animate">
             <h1><?php
                 /* Ausgage der ACF Text-Felder
