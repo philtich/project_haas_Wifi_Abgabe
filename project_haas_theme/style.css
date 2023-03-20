@@ -65,7 +65,7 @@ img:not([src$=svg]) {
 }
 /* 
  * NAVIGATION
- */
+ */ 
 
 /* Navbar */
 #navbar {
@@ -194,6 +194,7 @@ img:not([src$=svg]) {
     #nav-main>li>a {
         font-size: 1.1em;
         line-height: 100px;
+        
     }
 
     #nav-main .current-menu-item>a {
@@ -206,7 +207,7 @@ img:not([src$=svg]) {
         left: 50%;
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
-        width: 150px;
+        width: 250px;
         background-color: #155e62;
         opacity: 0;
         pointer-events: none;
@@ -214,6 +215,7 @@ img:not([src$=svg]) {
         transition: opacity 150ms ease-in-out;
         border: 1px #efefef solid;
     }
+
 
     /* Triangle Generator => https://codepen.io/yukulele/pen/AgzXdJ */
     #nav-main .sub-menu:before {

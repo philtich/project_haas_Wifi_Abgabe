@@ -28,14 +28,14 @@ $steckbrief = get_field('steckbrief');
 if (!empty($steckbrief)) : ?>
     
     
-            <h1><?php
+            <h1 class="w3-animate-zoom"><?php
                 
                 echo $steckbrief['headline'];
                 
                 ?></h1>
 
                  
-    <section class="blocks"> 
+    <section class="blocks w3-animate-zoom"> 
                 <?php if ($steckbrief['name']) {
                     echo ' <h3>'  . $steckbrief['name'] . '</h3>';
                 }
