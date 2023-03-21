@@ -198,7 +198,7 @@ img:not([src$=svg]) {
     }
 
     #nav-main .current-menu-item>a {
-        color: #7000b6;
+        color: orange;
     }
 
     #nav-main .sub-menu {
