@@ -785,7 +785,7 @@ font-size: 1.7em;}
 }
 
 .pagination .current {
-    color: #7000b6;
+    color: orange;
     font-weight: 600;
 }
 
