@@ -21,7 +21,7 @@ if (!empty($block['className'])) {
  */
 $textareal = get_field('textarea');
 if (!empty($textareal)) : ?>
-    <div style="color: #efefef; text-align: center; margin: 2.5% 5%;"class="<?php echo $class_name ?>">
+    <div style="color: #efefef; text-align: center; margin: 2.5% 0%;"class="<?php echo $class_name ?>">
     
             <h2><?php
                 
